@@ -58,7 +58,7 @@ function TapList(){
 
   return(
     <div>
-      {state.map((tap, index)=>
+      {state.masterKegList.map((tap, index)=>
         <Tap name = {tap.name}
           brewer = {tap.brewer}
           description = {tap.description}

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 function Tap(props){
   const TAP_STYLE = {
@@ -15,12 +15,12 @@ function Tap(props){
 }
 
 Tap.propTypes ={
-  name: PropType.string,
-  brewer: PropType.brewer,
-  description: PropType.description,
-  abv: PropType.abv,
-  price: PropType.price,
-  remaining: PropType.remaining
+  name: PropTypes.string,
+  brewer: PropTypes.brewer,
+  description: PropTypes.description,
+  abv: PropTypes.abv,
+  price: PropTypes.price,
+  remaining: PropTypes.remaining
 };
 
 export default Tap;
