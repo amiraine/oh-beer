@@ -57,7 +57,7 @@ const state = {
 function TapList(){
   const TAPLIST = {
     textAlign: 'center',
-    padding: '50px 20px'
+    padding: '50px'
   }
   return(
     <div style={TAPLIST}>
