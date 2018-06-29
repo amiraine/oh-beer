@@ -1,4 +1,5 @@
 import React from 'react';
+import Tap from './Tap';
 
 const const state = {
   masterKegList: [

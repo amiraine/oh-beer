@@ -12,6 +12,12 @@ function Tap(props){
   );
 }
 Tap.propTypes ={
-  name: PropType.string
-}
+  name: PropType.string,
+  brewer: PropType.brewer,
+  description: PropType.description,
+  abv: PropType.abv,
+  price: PropType.price,
+  remaining: PropType.remaining
+};
+
 export default Tap;
