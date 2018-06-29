@@ -10,8 +10,7 @@ function Router(){
   return(
     <div>
       <Switch>
-        <Route exact path='/no' component={AgeCheck}/>
-        <Route path='/' component={Hero}/>
+        <Route exact path='/' component={Hero}/>
         <Route path="/taps" component={TapList}/>
         <Route component={Error404}/>
       </Switch>

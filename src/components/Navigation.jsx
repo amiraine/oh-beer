@@ -12,7 +12,7 @@ function Navigation(){
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '5px 100px 5px 20px',
-    borderBottom: '5px solid darkgrey'
+    borderBottom: '5px solid dark'
   }
   return(
     <div style={NAV_STYLES}>
@@ -29,7 +29,7 @@ function Navigation(){
         }
       `}</style>
       <img src={logo} />
-      <Link to="/home" style={LINK}>Home</Link>
+      <Link to="/" style={LINK}>Home</Link>
       <Link to="/taps" style={LINK}>Current Taps</Link>
     </div>
   );
