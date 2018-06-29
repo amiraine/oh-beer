@@ -18,7 +18,8 @@ A redesign for a tap room using React routing and looping.
 - React
   * React router DOM
 
-### Future features
+### Problems
+-
 
 
 ### Licenses

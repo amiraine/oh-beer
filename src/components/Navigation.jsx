@@ -29,7 +29,7 @@ function Navigation(){
         }
       `}</style>
       <img src={logo} />
-      <Link to="/" style={LINK}>Home</Link>
+      <Link to="/home" style={LINK}>Home</Link>
       <Link to="/taps" style={LINK}>Current Taps</Link>
     </div>
   );
