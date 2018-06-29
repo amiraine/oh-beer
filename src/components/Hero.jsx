@@ -10,6 +10,7 @@ function Hero(){
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    borderBottom: '5px solid darkgrey'
   };
   const HERO_H1 ={
     fontSize: "calc(100% + 4em)",
@@ -21,7 +22,7 @@ function Hero(){
     <div style = {HERO_STYLE}>
       <style>{`
         h1,h3{
-          text-shadow: 1px 1px 20px black;
+          text-shadow: 1px 1px 20px #333333;
           color: white;
         }
       `}</style>

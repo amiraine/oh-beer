@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 function Tap(props){
   const TAP_STYLE = {
-    border: '1px solid black'
+    borderBottom: '1px solid black',
+    padding: '10px'
   }
   return(
     <div style={TAP_STYLE}>

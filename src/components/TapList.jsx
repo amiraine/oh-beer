@@ -55,9 +55,13 @@ const state = {
 };
 
 function TapList(){
-
+  const TAPLIST = {
+    textAlign: 'center',
+    padding: '50px 20px'
+  }
   return(
-    <div>
+    <div style={TAPLIST}>
+      <h1>Current beers on tap</h1>
       {state.masterKegList.map((tap, index)=>
         <Tap name = {tap.name}
           brewer = {tap.brewer}

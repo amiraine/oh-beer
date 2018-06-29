@@ -5,13 +5,14 @@ import logo from '../assets/images/logo.png';
 function Navigation(){
   const LINK = {
     textDecoration: 'none',
-    fontSize: '2em'
+    fontSize: '1.5em'
   }
   const NAV_STYLES = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '5px 20px 5px 20px'
+    padding: '5px 100px 5px 20px',
+    borderBottom: '5px solid darkgrey'
   }
   return(
     <div style={NAV_STYLES}>
