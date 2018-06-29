@@ -3,20 +3,33 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
 function Navigation(){
-
+  const LINK = {
+    textDecoration: 'none',
+    fontSize: '2em'
+  }
+  const NAV_STYLES = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '5px 20px 5px 20px'
+  }
   return(
-    <div>
+    <div style={NAV_STYLES}>
       <style jsx>{`
         img {
-          height: 86px;
+          height: 100px;
         }
-        .link{
-          text-decoration: none;
-          color: red;
+        img:hover{
+          animation: spin 750ms ease-out 1;
+        }
+        @keyframes spin{
+          0% { transform:rotate(0deg); }
+          100% { transform:rotate(360deg); }
         }
       `}</style>
-      <Link to="/"><img src={logo} />Home</Link>
-      <Link to="/taps">Current Taps</Link>
+      <img src={logo} />
+      <Link to="/" style={LINK}>Home</Link>
+      <Link to="/taps" style={LINK}>Current Taps</Link>
     </div>
   );
 }
