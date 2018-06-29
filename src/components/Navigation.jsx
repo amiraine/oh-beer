@@ -32,8 +32,6 @@ function Navigation(){
           height: inherit;
           width: 300px;
         }
-
-        }
       `}</style>
       <Logo/>
       <div className='links'>
