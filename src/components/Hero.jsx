@@ -25,6 +25,14 @@ function Hero(){
           text-shadow: 1px 1px 20px #333333;
           color: white;
         }
+        h1:hover{
+          animation: fade 1s ease-in 1;
+          color: #ffa391;
+        }
+        @keyframes fade{
+          0% {color: white; }
+          100% {color: #ffa391; }
+        }
       `}</style>
       <h1 style = {HERO_H1}>Oh, Beer!</h1>
       <h3 style = {HERO_H3}>Portland's #1 Tap Room</h3>

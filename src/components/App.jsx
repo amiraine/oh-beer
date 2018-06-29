@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import TapList from './TapList';
 import Router from './Router';
-
+import Footer from './Footer';
 function App(){
   return(
     <div>
@@ -16,6 +16,7 @@ function App(){
       `}</style>
       <Navigation/>
       <Router/>
+      <Footer/>
     </div>
   );
 }
