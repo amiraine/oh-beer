@@ -9,7 +9,6 @@ function App(){
           padding:0;
         }
       `}</style>
-      <p>hello world</p>
     </div>
   );
 }
