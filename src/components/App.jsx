@@ -96,7 +96,6 @@ class App extends React.Component{
       ]
     }
     this.handleAddNewTap = this.handleAddNewTap.bind(this);
-    this.handleSelectedTap = this.handleSelectedTap.bind(this);
     this.handleSellPint = this.handleSellPint.bind(this);
   }
 // functions go under here
@@ -115,7 +114,6 @@ class App extends React.Component{
       }
     };
     this.setState({masterTapList: newVolumeTapList});
-    console.log(newVolumeTapList[index].remaining);
   }
 
   render(){

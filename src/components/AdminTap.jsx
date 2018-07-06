@@ -5,10 +5,18 @@ function AdminTap(props){
   function sellPint(){
     props.handleSellPint(props.beerId);
   }
-
+  let emptyKeg = null;
+  let hideButton = null;
+  if(props.remaining === 0){
+    emptyKeg = 'Please replace this keg as soon as possible!';
+    hideButton = 'hidden';
+  }
   return(
     <div>
       <style jsx>{`
+        .hidden{
+          display: none;
+        }
         .tap-items{
           padding: 20px;
         }
@@ -37,7 +45,8 @@ function AdminTap(props){
       `}</style>
       <div className="grid-wrapper">
         <div className="button-wrapper">
-          <button onClick={sellPint}>Sell pint</button>
+          <button className={hideButton} onClick={sellPint}>Sell pint</button>
+          {emptyKeg}
         </div>
         <div className="remainder">
           <h2>{props.remaining} pints</h2>

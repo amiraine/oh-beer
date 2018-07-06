@@ -8,10 +8,22 @@ function Tap(props){
   const DIVIDER = {
     textDecoration: 'underline'
   }
+  let emptyKeg = null;
+
+  if (props.remaining === 0){
+    emptyKeg = 'This beer is sold out!'
+  }
   return(
     <div style={TAP_STYLE}>
+      <style jsx>{`
+        strong{
+          color: red;
+          text-decoration: underline;
+        }
+      `}</style>
       <div className="items">
         <h4>{props.name} by {props.brewer}</h4>
+        <strong>{emptyKeg}</strong>
         <h5>{props.description}</h5>
         <div style={DIVIDER}>
           <h5>ABV: {props.abv} | Price: ${props.price} | Remaining: {props.remaining} pints</h5>
