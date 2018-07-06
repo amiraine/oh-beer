@@ -14,6 +14,7 @@ function Router(){
         <Route exact path='/' component={Hero}/>
         <Route path="/taps" component={TapList}/>
         <Route path="/admin" component={Admin}/>
+        <Route path="/aa" component={AgeCheck}/>
         <Route component={Error404}/>
       </Switch>
     </div>

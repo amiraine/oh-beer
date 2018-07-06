@@ -39,6 +39,7 @@ function Navigation(){
       </div>
       <div className='links'>
         <Link to="/taps" style={LINK}>Current Taps</Link>
+        <Link to="/aa">test</Link>
       </div>
     </div>
   );

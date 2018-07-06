@@ -1,47 +1,65 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-function AgeCheck(){
-  const AGE ={
-    backgroundColor: 'black',
-    background: 'url(https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg)',
-    height: '100vh',
-    width: '100vw',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    position: 'absolute',
-    top: '0vh',
-    left: '0',
-    zIndex: '2',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent:'center',
-    alignItems:'center'
+
+
+class AgeCheck extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      overAge: false
+    }
+    this.handleConfirm = this.handleConfirm.bind(this);
   }
-  const AGE_TEXT = {
-    fontSize: '3.5em',
-    color: 'white',
-    textShadow: '1px 1px 20px #333333',
-    margin: '20px'
+
+  handleConfirm(){
+    this.setState({overAge: true});
   }
-  const AGE_LINK = {
-    fontSize: '2.5em',
-    padding: '10px',
-    textDecoration: 'none',
-    color: 'white',
-    backgroundColor: 'rgba(0,0,0,0.8)',
-    borderRadius: '10px',
-    margin: '20px',
-    width: '200px'
+
+  render(){
+    const AGE_LINK = {
+      fontSize: '2.5em',
+      padding: '10px',
+      textDecoration: 'none',
+      color: 'white',
+      backgroundColor: 'rgba(0,0,0,0.8)',
+      borderRadius: '10px',
+      margin: '20px',
+      width: '250px'
+    }
+    return(
+      <div className="check-wrapper">
+        <style jsx>{`
+            .check-wrapper{
+              background-color: black;
+              background: url('https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg');
+              height: 100vh;
+              width: 100vw;
+              background-size: cover;
+              background-repeat: no-repeat;
+              position: fixed;
+              top: 0;
+              left: 0;
+              z-index: 2;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            .check-text{
+              font-size: 3.5em;
+              color: white;
+              text-shadow: 1px 1px 20px #333;
+              margin: 20px;
+            }
+            `}</style>
+          <h1 className="check-text">Are you over 21 or older?</h1>
+          <div>
+            <Link to="/home" onClick={this.handleConfirm} style={AGE_LINK}>Yes</Link>
+            <a href="https://google.com" style={AGE_LINK}>No</a>
+          </div>
+        </div>
+    )
   }
-  return(
-    <div style={AGE}>
-      <h1 style={AGE_TEXT}>Are you over 21 or older?</h1>
-      <div>
-        <Link to="/home" style={AGE_LINK}>Yes</Link>
-        <Link to="/nothing" style={AGE_LINK}>No</Link>
-      </div>
-    </div>
-  );
 }
 
 export default AgeCheck;
