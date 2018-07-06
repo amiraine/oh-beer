@@ -4,6 +4,7 @@ import TapList from './TapList';
 import Hero from './Hero';
 import Error404 from './Error404';
 import AgeCheck from './AgeCheck';
+import Admin from './Admin';
 
 function Router(){
 
@@ -12,6 +13,7 @@ function Router(){
       <Switch>
         <Route exact path='/' component={Hero}/>
         <Route path="/taps" component={TapList}/>
+        <Route path="/admin" component={Admin}/>
         <Route component={Error404}/>
       </Switch>
     </div>
