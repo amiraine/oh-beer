@@ -35,11 +35,10 @@ function Navigation(){
       `}</style>
       <Logo/>
       <div className='links'>
-        <Link to="/" style={LINK}>Home</Link>
+        <Link to="/home" style={LINK}>Home</Link>
       </div>
       <div className='links'>
         <Link to="/taps" style={LINK}>Current Taps</Link>
-        <Link to="/aa">test</Link>
       </div>
     </div>
   );
