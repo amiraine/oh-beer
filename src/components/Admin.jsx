@@ -15,6 +15,7 @@ function Admin(props){
         }
         input{
           padding: 5px;
+          margin-bottom: 15px;
         }
         input::placeholder{
           font-size: 1.5em;
@@ -25,6 +26,13 @@ function Admin(props){
         }
         .inline-labels label{
           width: 188px;
+        }
+        button{
+          padding: 15px 45px;
+          background-color: #ffa391;
+          font-size: .75em;
+          border-radius: 5px;
+          border: 1px transparent;
         }
       `}</style>
       <h2>Administrator page</h2>

@@ -6,7 +6,7 @@
 A redesign for a tap room using React routing and looping.
 
 ### Component structure
-<img src="./src/assets/images/component.jpg" width=500px>
+<img src="./src/assets/images/component.JPG" width=500px>
 
 ### Setup Instructions
   1. Clone repository from (https://github.com/amiraine/tap.git)
