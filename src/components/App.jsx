@@ -70,8 +70,8 @@ class App extends React.Component{
 // functions go under here
   handleAddNewTap(newTap){
     var newMasterTapList = this.state.masterTapList.slice();
-    newMasterTapList.push(newTicket);
-    this.setSTate({masterTapList: newMasterTapList});
+    newMasterTapList.push(newTap);
+    this.setState({masterTapList: newMasterTapList});
   }
 // render
   render(){
