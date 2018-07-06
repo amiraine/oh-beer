@@ -27,7 +27,8 @@ Tap.propTypes ={
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.string.isRequired
+  remaining: PropTypes.string.isRequired,
+  id: PropTypes.number
 };
 
 export default Tap;

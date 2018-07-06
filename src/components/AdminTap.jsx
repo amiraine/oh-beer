@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function AdminTap(props){
 
-  // function handleSellPintClick(index){
-  //   props.onSellPint(index);
-  // }
+  function sellPint(){
+    props.onSellPint(props.beerId);
+  }
 
   return(
     <div>
@@ -38,7 +38,7 @@ function AdminTap(props){
       `}</style>
       <div className="grid-wrapper">
         <div className="button-wrapper">
-          <button>Sell pint</button>
+          <button onClick={sellPint}>Sell pint</button>
         </div>
         <div className="remainder">
           <h2>{props.remaining} pints</h2>
@@ -62,6 +62,7 @@ AdminTap.propTypes ={
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   remaining: PropTypes.string.isRequired,
+  id: PropTypes.number,
   onSellPint: PropTypes.func
 };
 

@@ -23,7 +23,8 @@ class App extends React.Component{
           description: 'Sparkling Wine & Grapefruit',
           abv: '6.8%',
           price: '7',
-          remaining: '20'
+          remaining: '20',
+          beerId: 1
         },
         {
           name: 'Tart N Juicy',
@@ -31,7 +32,8 @@ class App extends React.Component{
           description: 'Sour IPA',
           abv: '4.5%',
           price: '6',
-          remaining: '60'
+          remaining: '60',
+          beerId: 6
         },
         {
           name: 'Hamm\'s',
@@ -39,7 +41,8 @@ class App extends React.Component{
           description: 'American Lager',
           abv: '4.7%',
           price: '3',
-          remaining: '65'
+          remaining: '65',
+          beerId: 2
         },
         {
           name: 'Prismatic',
@@ -47,7 +50,8 @@ class App extends React.Component{
           description: 'Juicy IPA',
           abv:  '5.9%',
           price: '6',
-          remaining: '75'
+          remaining: '75',
+          beerId: 3
         },
         {
           name: 'Juicy Haze',
@@ -55,7 +59,8 @@ class App extends React.Component{
           description: 'India Pale Ale',
           abv:  '7.5%',
           price: '6',
-          remaining: '18'
+          remaining: '18',
+          beerId: 4
         },
         {
           name: '8 Hop',
@@ -63,7 +68,8 @@ class App extends React.Component{
           description: 'Pale Ale',
           abv:  '5.5%',
           price: '6',
-          remaining: '58'
+          remaining: '58',
+          beerId: 5
         }
       ],
       masterMenu: [
@@ -94,20 +100,21 @@ class App extends React.Component{
   }
 // functions go under here
   handleAddNewTap(newTap){
-    var newMasterTapList = this.state.masterTapList.slice();
+    let newMasterTapList = this.state.masterTapList.slice();
     newMasterTapList.push(newTap);
     this.setState({masterTapList: newMasterTapList});
   }
-  handleSellPint(index){
-    var newVolumeTapList = this.state.masterTapList.slice();
-    let selectedPint = this.state.masterTapList[index]
-    let newVolume = selectedPint.remaining -=1;
-    newVolumeTapList[index].remaining = newVolume;
 
-    this.setState({masterTapList: newVolumeTapList});
+  handleSellPint(index){
+    let newVolumeTapList = this.state.masterTapList.slice();
+    for(var i = 0; i<newVolumeTapList.length; i++){
+      if(i === index){
+        
+        newVolumeTapList[index].remaining -= 1;
+      }
+    };
   }
 
-// render
   render(){
     return(
       <div className="parent-wrapper">
