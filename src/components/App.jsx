@@ -129,6 +129,12 @@ class App extends React.Component{
             border-radius: 5px;
             border: 1px transparent;
           }
+          h1{
+            background-color: #ffa391;
+            padding: 20px 0px;
+            color: white;
+            margin
+          }
           .items:hover{
             animation: fade .5s ease-out 1;
             color: #ffa391;

@@ -8,9 +8,10 @@ function AdminTapList(props){
       <style jsx>{`
         h1{
           text-align: center;
-        }
-        div{
-          padding: 20px 15vw;
+          color: white;
+          padding: 20px 0px;
+          background-color: #ffa391;
+          margin-bottom: 20px;
         }
       `}</style>
       <h1>Current beers for sale</h1>

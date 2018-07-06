@@ -19,17 +19,17 @@ function Hero(){
           border-image: linear-gradient(90deg, #ffa391, #ffc757);
           border-image-slice:1;
         }
-        h1{
+        p{
           font-size: calc(100% + 4em);
         }
         h3{
           font-size: 2em;
         }
-        h1,h3{
+        h1,h3,p{
           text-shadow: 1px 1px 20px #333333;
           color: white;
         }
-        h1:hover{
+        p:hover{
           animation: fade 1s ease-in 1;
           color: #ffa391;
         }
@@ -38,7 +38,7 @@ function Hero(){
           100% {color: #ffa391; }
         }
       `}</style>
-      <h1>Oh, Beer!</h1>
+    <p>Oh, Beer!</p>
       <h3>Portland's #1 Tap Room</h3>
     </div>
   );

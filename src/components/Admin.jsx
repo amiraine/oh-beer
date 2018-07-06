@@ -36,6 +36,7 @@ function Admin(props){
         h1{
           background-color: #ffa391;
           color: white;
+          padding: 20px 0px;
         }
         .form{
           display: flex;

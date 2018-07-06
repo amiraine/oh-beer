@@ -10,11 +10,7 @@ function TapList(props){
         div{
           text-align: center;
         }
-        h1{
-          background-color: #ffa391;
-          padding: 20px 0px;
-          color: white;
-        }
+
       `}</style>
       <h1>Current beers on tap</h1>
       {props.masterTapList.map((tap, index)=>
