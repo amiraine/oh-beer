@@ -22,7 +22,7 @@ function Logo(){
           color: rgba(255,210,86,0.2);
           background-repeat: none;
           background: url('https://i.imgur.com/VmZ1FH6.jpg?1');
-          background-position: top center;
+          background-position: bottom right;
           -webkit-background-clip: text;
           font-weight: 900;
           margin-left: 20px;

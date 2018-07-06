@@ -5,12 +5,14 @@ function MenuItem(props){
   return(
     <div>
       <style jsx>{`
-        h4{
+        h5{
           text-decoration: underline;
         }
       `}</style>
-      <h3>{props.name} - ${props.price}</h3>
-      <h4>{props.detail}</h4>
+      <div className="items">
+        <h4>{props.name} - ${props.price}</h4>
+        <h5>{props.detail}</h5>
+      </div>
     </div>
   )
 }

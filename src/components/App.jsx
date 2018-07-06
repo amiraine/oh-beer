@@ -129,6 +129,14 @@ class App extends React.Component{
             border-radius: 5px;
             border: 1px transparent;
           }
+          .items:hover{
+            animation: fade .5s ease-out 1;
+            color: #ffa391;
+          }
+          @keyframes fade{
+            0% {color: black; }
+            100% {color: #ffa391; }
+          }
         `}</style>
         <Navigation/>
           <Switch>

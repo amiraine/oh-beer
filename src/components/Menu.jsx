@@ -10,11 +10,15 @@ function Menu(props){
           text-align: center;
         }
         h1{
-          padding: 20px;
+          padding: 20px 0px;
+          background-color: #ffa391;
+          color: white;
+          
         }
         .each-item{
           margin: 30px 20vw;
         }
+
       `}</style>
       <h1>Food menu</h1>
         {props.masterMenu.map((food, index)=>
@@ -27,6 +31,9 @@ function Menu(props){
             />
           </div>
         )}
+        <div>
+
+        </div>
     </div>
   );
 }

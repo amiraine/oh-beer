@@ -43,7 +43,7 @@ function AdminTap(props){
         <div className="remainder">
           <h2>{props.remaining} pints</h2>
         </div>
-        <div className="tap-items">
+        <div className="items">
           <h4>{props.name} by {props.brewer}</h4>
           <h5>{props.description}</h5>
           <div>

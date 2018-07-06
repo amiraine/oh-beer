@@ -3,12 +3,19 @@ import Tap from './Tap';
 import PropTypes from 'prop-types';
 
 function TapList(props){
-  const TAPLIST = {
-    textAlign: 'center',
-    padding: '50px'
-  }
+
   return(
-    <div style={TAPLIST}>
+    <div>
+      <style jsx>{`
+        div{
+          text-align: center;
+        }
+        h1{
+          background-color: #ffa391;
+          padding: 20px 0px;
+          color: white;
+        }
+      `}</style>
       <h1>Current beers on tap</h1>
       {props.masterTapList.map((tap, index)=>
         <Tap name = {tap.name}
