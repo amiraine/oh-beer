@@ -24,6 +24,7 @@ function AdminTapList(props){
           remaining = {tap.remaining}
           key = {index}
           beerId = {index}
+          handleSellPint = {props.handleSellPint}
         />
       )}
     </div>
@@ -31,6 +32,6 @@ function AdminTapList(props){
 }
 AdminTapList.propTypes = {
   masterTapList: PropTypes.array,
-  onSellPint: PropTypes.func
+  handleSellPint: PropTypes.func
 }
 export default AdminTapList;

@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function AdminTap(props){
-
   function sellPint(){
-    props.onSellPint(props.beerId);
+    props.handleSellPint(props.beerId);
   }
 
   return(
@@ -56,14 +55,14 @@ function AdminTap(props){
 }
 
 AdminTap.propTypes ={
+  handleSellPint: PropTypes.func,
   name: PropTypes.string.isRequired,
   brewer: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.string.isRequired,
+  remaining: PropTypes.number.isRequired,
   id: PropTypes.number,
-  onSellPint: PropTypes.func
 };
 
 export default AdminTap;

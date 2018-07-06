@@ -23,7 +23,7 @@ class App extends React.Component{
           description: 'Sparkling Wine & Grapefruit',
           abv: '6.8%',
           price: '7',
-          remaining: '20',
+          remaining: 20,
           beerId: 1
         },
         {
@@ -32,7 +32,7 @@ class App extends React.Component{
           description: 'Sour IPA',
           abv: '4.5%',
           price: '6',
-          remaining: '60',
+          remaining: 60,
           beerId: 6
         },
         {
@@ -50,7 +50,7 @@ class App extends React.Component{
           description: 'Juicy IPA',
           abv:  '5.9%',
           price: '6',
-          remaining: '75',
+          remaining: 75,
           beerId: 3
         },
         {
@@ -59,7 +59,7 @@ class App extends React.Component{
           description: 'India Pale Ale',
           abv:  '7.5%',
           price: '6',
-          remaining: '18',
+          remaining: 18,
           beerId: 4
         },
         {
@@ -68,7 +68,7 @@ class App extends React.Component{
           description: 'Pale Ale',
           abv:  '5.5%',
           price: '6',
-          remaining: '58',
+          remaining: 58,
           beerId: 5
         }
       ],
@@ -96,6 +96,7 @@ class App extends React.Component{
       ]
     }
     this.handleAddNewTap = this.handleAddNewTap.bind(this);
+    this.handleSelectedTap = this.handleSelectedTap.bind(this);
     this.handleSellPint = this.handleSellPint.bind(this);
   }
 // functions go under here
@@ -104,15 +105,17 @@ class App extends React.Component{
     newMasterTapList.push(newTap);
     this.setState({masterTapList: newMasterTapList});
   }
-
   handleSellPint(index){
     let newVolumeTapList = this.state.masterTapList.slice();
-    for(var i = 0; i<newVolumeTapList.length; i++){
+    for(var i = 0; i < newVolumeTapList.length; i++){
       if(i === index){
-        
-        newVolumeTapList[index].remaining -= 1;
+        if(newVolumeTapList[index].remaining >0){
+          newVolumeTapList[index].remaining -= 1;
+        }
       }
     };
+    this.setState({masterTapList: newVolumeTapList});
+    console.log(newVolumeTapList[index].remaining);
   }
 
   render(){
@@ -165,8 +168,8 @@ class App extends React.Component{
               path="/sales"
               render={()=><AdminTapList
                 masterTapList ={this.state.masterTapList}
-                onSellPint = {this.handleSellPint}
-                />
+                handleSellPint = {this.handleSellPint}
+              />
             }
             />
             <Route
