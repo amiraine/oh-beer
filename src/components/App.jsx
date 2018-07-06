@@ -107,10 +107,8 @@ class App extends React.Component{
   handleSellPint(index){
     let newVolumeTapList = this.state.masterTapList.slice();
     for(var i = 0; i < newVolumeTapList.length; i++){
-      if(i === index){
-        if(newVolumeTapList[index].remaining >0){
-          newVolumeTapList[index].remaining -= 1;
-        }
+      if(i === index && newVolumeTapList[index].remaining >0){
+        newVolumeTapList[index].remaining -= 1;
       }
     };
     this.setState({masterTapList: newVolumeTapList});

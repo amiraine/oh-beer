@@ -39,7 +39,7 @@ function AgeCheck(props){
             margin: 20px;
           }
           `}</style>
-      <h1 className="check-text">Are you over 21 or older?</h1>
+        <strong className="check-text">Are you over 21 or older?</strong>
       <div>
         <Link to="/home" onClick={props.onConfirm} style={AGE_LINK}>Yes</Link>
         <a href="https://google.com" style={AGE_LINK}>No</a>
