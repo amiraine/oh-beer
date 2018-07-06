@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Footer(){
   const FOOTER_STYLE = {
     position: 'fixed',
@@ -11,6 +11,7 @@ function Footer(){
   return(
     <div style={FOOTER_STYLE}>
       <sub>© Ami Cooper 2018 All Rights Reserved</sub>
+      <br/><sub><Link to="/admin">Administrator</Link></sub>
     </div>
   );
 }

@@ -65,7 +65,6 @@ class App extends React.Component{
         }
       ]
     }
-
   }
 // functions go under here
 
