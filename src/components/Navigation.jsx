@@ -5,6 +5,7 @@ function Navigation(){
   const LINK = {
     textDecoration: 'none',
     fontSize: '1.5em'
+    color: 'black';
   }
   const NAV_STYLES = {
     display: 'flex',
@@ -26,9 +27,9 @@ function Navigation(){
         }
         .links{
           box-sizing: border-box;
+          color: black;
         }
         .dynamic{
-
           height: inherit;
           width: 300px;
         }

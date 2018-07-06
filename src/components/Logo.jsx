@@ -27,7 +27,7 @@ function Logo(){
           font-weight: 900;
           margin-left: 20px;
           -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: #ffd256;
+          -webkit-text-stroke-color: #ff8d77;
         }
         h2:hover{
           animation: background 8s linear infinite;
