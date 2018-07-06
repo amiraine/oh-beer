@@ -9,6 +9,8 @@ import Hero from './Hero';
 import Error404 from './Error404';
 import AgeControl from './AgeControl';
 import Admin from './Admin';
+import Menu from './Menu';
+import AdminTapList from './AdminTapList';
 
 class App extends React.Component{
   constructor(props){
@@ -63,9 +65,32 @@ class App extends React.Component{
           price: '6',
           remaining: '58'
         }
+      ],
+      masterMenu: [
+        {
+          name: 'French Fries',
+          price: '5',
+          detail: 'Crispy shoestring fries with truffle salt and fresh herbs'
+        },
+        {
+          name: 'Chicken Wings',
+          price: '8',
+          detail: 'Freshly fried free range chicken with your choice of marinade and your choice of dipping sauce!'
+        },
+        {
+          name: 'Nachos',
+          price: '7',
+          detail: 'Fresh tortilla chips in a housemade sharp cheddar and beer sauce with all the fixin\'s.'
+        },
+        {
+          name: 'Mozzarella Bites',
+          price: '8',
+          detail: 'Bite-size pieces of mozzarella deep-fried in a beer batter and served with fresh marinara sauce.'
+        }
       ]
     }
     this.handleAddNewTap = this.handleAddNewTap.bind(this);
+    this.handleSellPint = this.handleSellPint.bind(this);
   }
 // functions go under here
   handleAddNewTap(newTap){
@@ -73,10 +98,19 @@ class App extends React.Component{
     newMasterTapList.push(newTap);
     this.setState({masterTapList: newMasterTapList});
   }
+  handleSellPint(index){
+    var newVolumeTapList = this.state.masterTapList.slice();
+    let selectedPint = this.state.masterTapList[index]
+    let newVolume = selectedPint.remaining -=1;
+    newVolumeTapList[index].remaining = newVolume;
+
+    this.setState({masterTapList: newVolumeTapList});
+  }
+
 // render
   render(){
     return(
-      <div>
+      <div className="parent-wrapper">
         <style jsx global>{`
           @import url('https://fonts.googleapis.com/css?family=Poppins:400,900');
           *{
@@ -85,20 +119,52 @@ class App extends React.Component{
             font-family: 'Poppins', sans-serif;
             font-weight: 400;
           }
+          *:focus{
+            outline: none;
+          }
+          button{
+            padding: 15px 45px;
+            background-color: #ffa391;
+            font-size: .75em;
+            border-radius: 5px;
+            border: 1px transparent;
+          }
         `}</style>
         <Navigation/>
           <Switch>
-            <Route exact path='/' component={AgeControl}/>
+            <Route
+              exact path='/'
+              component={AgeControl}
+            />
             <Route
               path="/taps"
               render={()=><TapList masterTapList={this.state.masterTapList}/>}
             />
             <Route
+              path="/sales"
+              render={()=><AdminTapList
+                masterTapList ={this.state.masterTapList}
+                onSellPint = {this.handleSellPint}
+                />
+            }
+            />
+            <Route
               path="/admin"
               render={()=><Admin onNewTapCreation={this.handleAddNewTap} /> }
             />
-            <Route path="/home" component={Hero}/>
-            <Route component={Error404}/>
+            <Route
+              path="/home"
+              component={Hero}
+            />
+            <Route
+              path="/menu"
+              render={()=><Menu
+                masterMenu = {this.state.masterMenu} />
+              }
+            />
+          <Route
+              component={Error404}
+          />
           </Switch>
         <Footer/>
       </div>

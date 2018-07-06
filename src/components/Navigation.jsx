@@ -4,8 +4,8 @@ import Logo from './Logo'
 function Navigation(){
   const LINK = {
     textDecoration: 'none',
-    fontSize: '1.5em'
-    color: 'black';
+    fontSize: '1.5em',
+    color: 'black'
   }
   const NAV_STYLES = {
     display: 'flex',
@@ -37,6 +37,9 @@ function Navigation(){
       <Logo/>
       <div className='links'>
         <Link to="/home" style={LINK}>Home</Link>
+      </div>
+      <div className='links'>
+        <Link to="/menu" style={LINK}>Menu</Link>
       </div>
       <div className='links'>
         <Link to="/taps" style={LINK}>Current Taps</Link>

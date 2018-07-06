@@ -1,9 +1,6 @@
 import React from 'react';
 
 function Hero(){
-  const HERO_H3 = {
-    fontSize: '2em',
-  };
   return(
     <div className="hero">
       <style>{`

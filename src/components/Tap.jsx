@@ -20,7 +20,7 @@ function Tap(props){
           100% {color: #ffa391; }
         }
       `}</style>
-    <div className="tap-items">
+      <div className="tap-items">
         <h4>{props.name} by {props.brewer}</h4>
         <h5>{props.description}</h5>
         <div style={DIVIDER}>
@@ -32,12 +32,12 @@ function Tap(props){
 }
 
 Tap.propTypes ={
-  name: PropTypes.string,
-  brewer: PropTypes.string,
-  description: PropTypes.string,
-  abv: PropTypes.string,
-  price: PropTypes.string,
-  remaining: PropTypes.string
+  name: PropTypes.string.isRequired,
+  brewer: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  abv: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  remaining: PropTypes.string.isRequired
 };
 
 export default Tap;

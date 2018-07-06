@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import AdminTapList from './AdminTapList';
+import { Link } from 'react-router-dom';
 function Admin(props){
   function handleNewSubmission(event){
     event.preventDefault();
@@ -29,8 +30,12 @@ function Admin(props){
   return(
     <div>
       <style jsx>{`
-        h2, h3{
+        h1, h2, h3{
           text-align: center;
+        }
+        h1{
+          background-color: #ffa391;
+          color: white;
         }
         .form{
           display: flex;
@@ -40,6 +45,9 @@ function Admin(props){
         input{
           padding: 5px;
           margin-bottom: 15px;
+          border-radius: 5px;
+          border: 2px solid #ddd;
+          line-height: 2em;
         }
         input::placeholder{
           font-size: 1.5em;
@@ -59,6 +67,7 @@ function Admin(props){
           border: 1px transparent;
         }
       `}</style>
+    <h1>For handling sales, <Link to="/sales">click here.</Link></h1>
       <h2>Administrator page</h2>
       <h3>Add a new keg</h3>
       <div className="form">
@@ -69,6 +78,7 @@ function Admin(props){
             size="90"
             id="beerName"
             ref={(input) => {_beerName = input;}}
+            required
             /><br/>
           <label>Brewery name</label><br/>
           <input
@@ -76,6 +86,7 @@ function Admin(props){
             size="90"
             id="brewery"
             ref={(input) => {_brewery = input;}}
+            required
           /><br/>
           <label>Beer type</label><br/>
           <input
@@ -83,6 +94,7 @@ function Admin(props){
             size="90"
             id="type"
             ref={(input) => {_type = input;}}
+            required
             /><br/>
           <div className="inline-labels">
             <label>ABV</label> <label>Price</label>
@@ -93,18 +105,21 @@ function Admin(props){
             size="28"
             id="abv"
             ref={(input) => {_abv = input;}}
+            required
             />
           <input
             placeholder="$7"
             size="28"
             id="price"
             ref={(input) => {_price = input;}}
+            required
             />
           <input
             placeholder="Remaining pints"
             size="28"
             id="remaining"
             ref={(input) => {_remaining = input;}}
+            required
             /><br/>
           <button type="submit">Submit</button>
         </form>

@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 function Footer(){
   const FOOTER_STYLE = {
     position: 'fixed',
-    bottom: '0',
+    bottom: '0px',
     left: '0',
     width: '100vw',
-    textAlign: 'center'
+    textAlign: 'center',
+    height: '58px'
   }
   return(
     <div style={FOOTER_STYLE}>
