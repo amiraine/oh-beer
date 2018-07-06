@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
-
+import beerfoam from '../assets/images/font-background.jpg';
 function Logo(){
   const LOGO_STYLES ={
     display: 'flex',
@@ -19,20 +19,22 @@ function Logo(){
           line-height: 100px;
           text-align: center;
           font-size: 3em;
-          color: rgba(0,0,0,0.1);
-          background: url(https://img00.deviantart.net/1f7c/i/2009/066/2/8/watercolor_texture4_by_valerianastock.jpg);
-          background-repeat: repeat-x;
+          color: rgba(255,210,86,0.2);
+          background-repeat: none;
+          background: url('https://i.imgur.com/VmZ1FH6.jpg?1');
           background-position: top center;
           -webkit-background-clip: text;
           font-weight: 900;
           margin-left: 20px;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #ffd256;
         }
         h2:hover{
-          animation: background 10s linear infinite;
+          animation: background 8s linear infinite;
         }
         @keyframes background{
-          0% { background-position: left 0px top 10px;}
-          40% { background position: left 800px top 10px; }
+          0% { background-position: left 0px top 0px;}
+          80% { background-position: left 0px top -200px; }
         }
         @keyframes spin{
           0% { transform:rotate(0deg); }

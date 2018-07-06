@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 function Tap(props){
   const TAP_STYLE = {
-    borderBottom: '1px solid black',
     padding: '10px'
+  }
+  const DIVIDER = {
+    textDecoration: 'underline'
   }
   return(
     <div style={TAP_STYLE}>
@@ -21,7 +23,9 @@ function Tap(props){
     <div className="tap-items">
         <h4>{props.name} by {props.brewer}</h4>
         <h5>{props.description}</h5>
-        <h5>ABV: {props.abv} | Price: ${props.price} | Remaining: {props.remaining} pints</h5>
+        <div style={DIVIDER}>
+          <h5>ABV: {props.abv} | Price: ${props.price} | Remaining: {props.remaining} pints</h5>
+        </div>
       </div>
     </div>
   );
