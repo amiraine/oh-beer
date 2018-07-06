@@ -65,9 +65,15 @@ class App extends React.Component{
         }
       ]
     }
+    this.handleAddNewTap = this.handleAddNewTap.bind(this);
   }
 // functions go under here
-
+  handleAddNewTap(newTap){
+    var newMasterTapList = this.state.masterTapList.slice();
+    newMasterTapList.push(newTicket);
+    this.setSTate({masterTapList: newMasterTapList});
+  }
+// render
   render(){
     return(
       <div>
@@ -87,7 +93,10 @@ class App extends React.Component{
               path="/taps"
               render={()=><TapList masterTapList={this.state.masterTapList}/>}
             />
-            <Route path="/admin" component={Admin}/>
+            <Route
+              path="/admin"
+              render={()=><Admin onNewTapCreation={this.handleAddNewTap} /> }
+            />
             <Route path="/home" component={Hero}/>
             <Route component={Error404}/>
           </Switch>

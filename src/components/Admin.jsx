@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Admin(props){
 
@@ -58,5 +59,7 @@ function Admin(props){
     </div>
   );
 }
-
+Admin.propTypes ={
+  onNewTapCreation: PropTypes.func
+}
 export default Admin;

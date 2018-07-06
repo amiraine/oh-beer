@@ -18,11 +18,6 @@ A redesign for a tap room using React routing and looping.
 - React
   * React router DOM
 
-### Problems
-- ran into a problem using an age check page to cover the site till "yes" is clicked, need to add class to make component display:none
-
-
-
 ### Licenses
 
 Copyright 2018 by Ami Cooper AKA github.com/amiraine
